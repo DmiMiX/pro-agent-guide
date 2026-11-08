@@ -77,7 +77,12 @@ const testsDir = path.join(rootDir, 'tests');
 if (fs.existsSync(testsDir)) {
   console.log('\n3. Запуск тестов (Node.js test runner)...');
   try {
-    execSync('node --test tests/**/*.test.js', { stdio: 'inherit', cwd: rootDir });
+    const testFiles = fs.readdirSync(testsDir)
+      .filter(f => f.endsWith('.test.js'))
+      .map(f => path.join('tests', f));
+    if (testFiles.length > 0) {
+      execSync(`node --test ${testFiles.map(f => `"${f}"`).join(' ')}`, { stdio: 'inherit', cwd: rootDir });
+    }
   } catch (err) {
     console.error('\n❌ Тесты завершились с ошибкой!');
     process.exit(1);

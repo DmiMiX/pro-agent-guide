@@ -21,8 +21,14 @@ jobs:
         with:
           node-version: 20
 
+      - name: Install Dependencies
+        run: npm install
+
       - name: Run Quality Check
         run: node scripts/check-all.js
+
+      - name: Build SPA Bundle
+        run: npm run build
 
       - name: Build Distribution Archive
         run: node scripts/pack.js

@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node --test tests/**/*.test.js",
+    "test": "node --test tests/*.test.js",
     "check-all": "node scripts/check-all.js",
     "sync-version": "node scripts/sync-version.js",
     "pack": "node scripts/pack.js",
