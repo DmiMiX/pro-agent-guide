@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-canvas: #F4F0EA;
+    --bg-card: #FFFFFF;
+    --bg-muted: #FFF9DB;
+    --bg-subtle: #EDE8DE;
+    --text-main: #1A1A1A;
+    --text-muted: #555555;
+    --border-main: #000000;
+    --shadow-main: #000000;
+    --primary: #FFE600;
+    --primary-hover: #FFDE1A;
+    --accent-pink: #FF59B3;
+    --accent-green: #38E54D;
+    --accent-cyan: #00F0FF;
+    --accent-orange: #FFA500;
+  }
+
+  [data-theme="dark"] {
+    --bg-canvas: #121215;
+    --bg-card: #1A1A22;
+    --bg-muted: #242430;
+    --bg-subtle: #2A2A38;
+    --text-main: #F4F0EA;
+    --text-muted: #A0A0B0;
+    --border-main: #000000;
+    --shadow-main: #FFE600;
+    --primary: #FFE600;
+    --primary-hover: #FFDE1A;
+    --accent-pink: #FF59B3;
+    --accent-green: #38E54D;
+    --accent-cyan: #00F0FF;
+    --accent-orange: #FFA500;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-canvas);
+    color: var(--text-main);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.03em;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'Geist Mono', monospace;
+    font-feature-settings: "tnum";
+  }
+}
+
+/* Neo-Brutalism Signature Utilities */
+.brutal-card {
+  background-color: var(--bg-card);
+  border: 3px solid var(--border-main);
+  box-shadow: 5px 5px 0px var(--shadow-main);
+  border-radius: 12px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+[data-theme="dark"] .brutal-card {
+  box-shadow: 5px 5px 0px #000000;
+  border-color: #38384A;
+}
+
+.brutal-card-hover:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px var(--shadow-main);
+}
+
+[data-theme="dark"] .brutal-card-hover:hover {
+  box-shadow: 7px 7px 0px #FFE600;
+  border-color: #FFE600;
+}
+
+.brutal-card-sm {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-main);
+  box-shadow: 3px 3px 0px var(--shadow-main);
+  border-radius: 8px;
+}
+
+[data-theme="dark"] .brutal-card-sm {
+  box-shadow: 3px 3px 0px #000000;
+  border-color: #38384A;
+}
+
+.brutal-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.brutal-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px #000000;
+}
+
+.brutal-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000000;
+}
+
+.brutal-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.brutal-input {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border: 3px solid var(--border-main);
+  box-shadow: 3px 3px 0px var(--shadow-main);
+  border-radius: 8px;
+  outline: none;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.brutal-input:focus {
+  border-color: #FFE600;
+  box-shadow: 5px 5px 0px #000000;
+}
+
+[data-theme="dark"] .brutal-input:focus {
+  border-color: #FFE600;
+  box-shadow: 5px 5px 0px #FFE600;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-subtle);
+  border-left: 2px solid var(--border-main);
+}
+::-webkit-scrollbar-thumb {
+  background: #FFE600;
+  border: 2px solid #000000;
+  border-radius: 4px;
+}

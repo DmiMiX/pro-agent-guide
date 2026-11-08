@@ -1,0 +1,50 @@
+{
+  "name": "pro-agent-guide",
+  "version": "0.1.0",
+  "description": "Интерактивный SPA-справочник вайбкодера: архитектура слеш-команд Antigravity, кросс-совместимость экосистем (Claude Code, Codex, Harness), каталог промптов и скриптов.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test tests/**/*.test.js",
+    "check-all": "node scripts/check-all.js",
+    "sync-version": "node scripts/sync-version.js",
+    "pack": "node scripts/pack.js",
+    "release": "node scripts/release.js",
+    "init-project": "node scripts/init-project.js"
+  },
+  "keywords": [
+    "vibe-coding",
+    "antigravity",
+    "claude-code",
+    "codex",
+    "ai-agents",
+    "slash-commands",
+    "skills",
+    "rules",
+    "neobrutalism"
+  ],
+  "author": "DmiMiX",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmiMiX/pro-agent-guide.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DmiMiX/pro-agent-guide/issues"
+  },
+  "homepage": "https://github.com/DmiMiX/pro-agent-guide#readme",
+  "dependencies": {
+    "lucide-react": "^1.16.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "@vitejs/plugin-react": "^6.0.1",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.3.5",
+    "vite": "^7.3.1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "isTemplate": false,
+  "version": "0.1.0",
+  "name": "ProAgent Guide",
+  "codename": "pro-agent-guide",
+  "projectType": "web",
+  "techStack": "React, Vite, Tailwind CSS, Neo-Brutalism UI",
+  "releaseDate": "6 ноября 2026",
+  "description": "Интерактивный SPA-справочник вайбкодера: архитектура слеш-команд Antigravity, кросс-совместимость экосистем (Claude Code, Codex, Harness), каталог промптов и скриптов."
+}
